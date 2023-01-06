@@ -162,6 +162,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 body {
@@ -171,8 +172,18 @@ body {
     background-color: #051028;
     overflow-x: hidden;
     position: relative;
+    cursor: none;
+
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
 a {
     text-decoration: none !important;
     color: #000;
@@ -297,6 +308,7 @@ p {
 
 .nav-menu li:hover .submenu {
     display: block;
+    cursor: none;
 }
 
 .submenu li {
@@ -316,7 +328,7 @@ p {
 }
 
 .submenu li:hover a {
-    color: #fff;
+    color: #fff;cursor: none;
 }
 
 .mainmenu li:hover .submenu {
@@ -327,17 +339,17 @@ p {
     margin: 0;
     position: absolute;
     transform: scale(1);
-    height: auto;
+    height: auto;cursor: none;
 }
 
 .mainmenu li:hover .submenu {
-    display: block;
+    display: block;cursor: none;
 }
 
 #main_header .mainmenu>li:hover,
 #main_header .mainmenu>li.active,
 #main_header .mainmenu>li.active:hover {
-    cursor: pointer;
+cursor: none;
     background: linear-gradient(0deg, #0052D4 0%, #4364F7 48.05%, #0052D4 100%);
 }
 
@@ -351,7 +363,7 @@ p {
 
 .mobile-nav-btn {
     display: none;
-    cursor: pointer;
+    cursor: none;
 }
 
 .mobile-nav-icon {
@@ -393,7 +405,7 @@ p {
 }
 
 .mobile_drop_down {
-    
+
     display: none;
 }
 
@@ -470,8 +482,8 @@ p {
 .theme_btn {
     margin-top: 35px;
     padding: 19px 42px;
-    cursor: pointer;
-    line-height: 0;
+    cursor: none;
+    
     border: none;
     display: inline-block;
     background: linear-gradient(0deg, #0052D4 0%, #4364F7 48.05%, #0052D4 100%);
@@ -545,11 +557,11 @@ p {
 }
 
 .theme_btn_2 {
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 35px;
     padding: 19px 42px;
-    cursor: pointer;
-    line-height: 0;
+    cursor: none;
+    
     border: none;
     display: inline-block;
     background: #FFFFFF;
@@ -568,6 +580,7 @@ p {
     letter-spacing: 0.02em;
     color: #051028;
     margin-inline-end: 8px;
+    margin-top: 35px;
 }
 
 .theme_btn_2:hover {
@@ -876,19 +889,22 @@ p {
 .work_description {
     text-align: center;
 }
+
 .work_description p {
     margin: 14px;
 }
-.work_description h2{
+
+.work_description h2 {
     font-weight: 600;
-        font-size: 24px;
-        line-height: 34px;
-        text-align: center;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-        color: #FFFFFF;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #FFFFFF;
 
 }
+
 .assurance_service_detail h2 {
     font-weight: 600;
     font-size: 24px;
@@ -953,7 +969,7 @@ p {
 .item_detail .image_item {
     margin-bottom: 30px;
     position: relative;
-    cursor: pointer;
+    cursor: none;
 }
 
 .filter_menu_item ul {
@@ -1353,7 +1369,7 @@ p {
     line-height: 1.566;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: #FFFFFF;
+    color: #FFFFFF;cursor: none;
 }
 
 .contact_inner_pages span,
@@ -1378,23 +1394,23 @@ p {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #FFFFFF;
-    text-align: center;
+    text-align: center;cursor: none;
 }
 
 .footer-top-bottom {
-    cursor: pointer;
+    cursor: none;
 }
 
 #services-item option {
-    color: #fff;
+    color: #fff;cursor: none;
 }
 
 #services-item {
-    color: #fff;
+    color: #fff;cursor: none;
 }
 
 textarea {
-    color: #fff;
+    color: #fff;cursor: none;
 }
 
 textarea#Comment,
@@ -1411,11 +1427,11 @@ textarea {
     margin-bottom: 16px;
     resize: vertical;
     background: #051028;
-    border: 1px solid #121B2E;
+    border: 1px solid #121B2E;cursor: none;
 }
 
 input[type=text] {
-    min-height: 61px;
+    min-height: 61px;cursor: none;
 }
 
 input[type=submit] {
@@ -1424,7 +1440,7 @@ input[type=submit] {
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: none;
 }
 
 input[type=submit]:hover {
@@ -1436,7 +1452,7 @@ input[type=submit]:hover {
     font-size: 14px;
     line-height: 1.428;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #FFFFFF;cursor: none;
 }
 
 .contact_form_wrapper #Message {
@@ -1463,26 +1479,28 @@ input[type=submit]:hover {
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    color: #fff;
-    margin-right: 8px
+    color: #fff;cursor: none;
+    margin-right: 8px 
 }
 
 .profile_det_submit_word span {
     color: #000;
+    display: inline-block;cursor: none;
 }
 
 .profile_det_submit_word svg path {
-    fill: #000;
+    fill: #000;cursor: none;
 }
 
 .contact_det_submit svg {
-    margin-inline-start: 7px;
+    margin-inline-start: 7px;cursor: none;
 }
 
 .contct_form_wrap {
     padding: 100px;
     background: #121B2E;
     border: 1px solid #263352;
+    cursor: none;
 }
 
 .card_detail h2 {
@@ -1507,7 +1525,7 @@ input[type=submit]:hover {
     text-align: center;
     border: 1px solid #263352;
     padding: 40px;
-    cursor: pointer;
+    cursor: none;
 }
 
 .working_card:hover .card_detail h2 {
@@ -1576,7 +1594,7 @@ input[type=submit]:hover {
     position: relative;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    cursor: none;
     margin-bottom: 22px;
 }
 
@@ -1658,7 +1676,7 @@ input[type=submit]:hover {
 
 select#phoneno,
 select#Budget {
-    color: #fff;
+    color: #fff;cursor: none;
 }
 
 .code_select {

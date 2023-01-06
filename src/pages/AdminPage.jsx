@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Col, Space, Table, Tag, ConfigProvider } from "antd";
+import { Col, Space, Table, Tag, ConfigProvider, Badge } from "antd";
+import {
+  RetweetOutlined,
+  ClockCircleOutlined,
+  MailOutlined,
+  WhatsAppOutlined,
+  DeleteOutlined,
+} from "@ant-design/icons";
 import { ToastContainer, toast } from "react-toastify";
+import Cursor from "../component/cursor";
+import Loader from "../component/Loader";
 const { Column, ColumnGroup } = Table;
-
 export default function AdminPage({ axios }) {
   const [data, setdata] = useState();
-
-  useEffect(() => {
+  const [loader, setloader] = useState(true);
+  function showdata() {
     axios
       .post("/admin/radheykrishna/show")
       .then((e) => {
@@ -18,10 +26,24 @@ export default function AdminPage({ axios }) {
         }
       })
       .catch((e) => console.log(e));
+  }
+  useEffect(() => {
+    setloader(false);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    showdata();
   }, []);
 
   return (
     <div>
+      <Cursor />
+
+      <div style={{ textAlign: "right", marginRight: "5%" }}>
+        {" "}
+        <RetweetOutlined onClick={showdata} />
+      </div>
+
+      <Loader loader={loader} />
+
       <Table
         theme={{
           token: {
@@ -59,38 +81,41 @@ export default function AdminPage({ axios }) {
           key="action"
           width={150}
           render={(_, record) => (
-            console.log(_),
-            (
-              <Space size="middle">
-                <Link
-                  onClick={() => {
-                    const newWindow = window.open(
-                      `mailto: ${_.email}`,
-                      "_blank"
-                    );
-                  }}
-                >
-                  Mail
-                </Link>
-                <Link
-                  onClick={() => {
-                    const newWindow = window.open(
-                      `https://api.whatsapp.com/send?phone=${_.phonenum}&text=Hello,We are Dark ninja solutions`,
-                      "_blank"
-                    );
-                  }}
-                >
-                  Whatapp
-                </Link>
-              </Space>
-            )
+            <Space size="middle">
+              <Link
+                onClick={() => {
+                  const newWindow = window.open(`mailto: ${_.email}`, "_blank");
+                }}
+              >
+                <MailOutlined />
+              </Link>
+              <Link
+                onClick={() => {
+                  const newWindow = window.open(
+                    `https://api.whatsapp.com/send?phone=${_.phonenum}&text=Hello,We are Dark ninja solutions`,
+                    "_blank"
+                  );
+                }}
+              >
+                <WhatsAppOutlined />
+              </Link>
+            </Space>
           )}
         />
       </Table>
+      <Badge
+        className="site-badge-count-109"
+        count={data?.length}
+        style={{
+          backgroundColor: "#0052D4",
+          color: "white",
+          textAlign: "right",
+        }}
+      />
 
       <ToastContainer
-        position="top-right"
-        autoClose={5000}
+        position="bottom-left"
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

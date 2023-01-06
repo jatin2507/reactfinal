@@ -4,13 +4,19 @@ import Navbars from "../component/Navbars";
 import { Link } from "react-router-dom";
 import EndFooter from "../component/EndFooter";
 import ServiceBox from "../component/ServiceBox";
+import Cursor from "../component/cursor";
+import Loader from "../component/Loader";
 
 const Services5 = () => {
-	React.useEffect(() => {
+	const [loader, setloader] = React.useState(true);
+  React.useEffect(() => {
+    setloader(false);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
-	return (
+  return (
     <div>
+      <Loader loader={loader} />
+      <Cursor />
       <Navbars active="services5" />
       <Particless />
       <div className="contact_section wow fadeInUp">
@@ -35,7 +41,7 @@ const Services5 = () => {
               />
             </svg>
             <Link
-              to="/services"
+              to="/Services"
               style={{ textDecoration: "none", color: "white" }}
             >
               Services Details
@@ -59,7 +65,7 @@ const Services5 = () => {
       <div className="info_section">
         <div className="about_blog container wow fadeInUp">
           <div className="row">
-            <div className="about_blog_left col-lg-8 col-md-7 col-sm-12">
+            <div className="about_blog_left col-lg-8 col-md-12 col-sm-12">
               <div className="about_blog_img">
                 <img
                   src={require("../images/services_page_5.png")}
@@ -120,7 +126,7 @@ const Services5 = () => {
                 </div>
               </div>
             </div>
-            <div className="about_blog_left col-lg-4 col-md-5 col-sm-12">
+            <div className="about_blog_left col-lg-4 col-md-d-none col-sm-12">
               <ServiceBox />
             </div>
           </div>

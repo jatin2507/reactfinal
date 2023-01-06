@@ -81,7 +81,7 @@ export default function ServicesCard() {
                     </div>
                     <div className="service_card_btn">
                       <span>
-                        <Link to="/services1">Read More</Link>
+                        <Link to="/Services/Graphic-Design">Read More</Link>
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +201,7 @@ export default function ServicesCard() {
                     </div>
                     <div className="service_card_btn">
                       <span>
-                        <Link to="/services2">Read More</Link>
+                        <Link to="/Services/UI/UX-Design">Read More</Link>
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -327,7 +327,7 @@ export default function ServicesCard() {
                     </div>
                     <div className="service_card_btn">
                       <span>
-                        <Link to="/services3">Read More</Link>
+                        <Link to="/Services/FrontEnd-Dev">Read More</Link>
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -575,7 +575,7 @@ export default function ServicesCard() {
                     </div>
                     <div className="service_card_btn">
                       <span>
-                        <Link to="/services4">Read More</Link>
+                        <Link to="/Services/BackEnd-Dev">Read More</Link>
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -807,7 +807,7 @@ export default function ServicesCard() {
                     </div>
                     <div className="service_card_btn">
                       <span>
-                        <Link to="/services5">Read More</Link>
+                        <Link to="/Services/Software-Dev">Read More</Link>
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -959,7 +959,7 @@ export default function ServicesCard() {
                     </div>
                     <div className="service_card_btn">
                       <span>
-                        <Link to="/services6">Read More</Link>
+                        <Link to="/Services/Game-Dev">Read More</Link>
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

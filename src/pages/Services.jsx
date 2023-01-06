@@ -5,12 +5,18 @@ import Particless from "../component/Particles";
 import { Link } from "react-router-dom";
 import EndFooter from "../component/EndFooter";
 import ServicesCard from "../component/ServicesCard";
+import Cursor from "../component/cursor";
+import Loader from "../component/Loader";
 export default function Services() {
-	React.useEffect(() => {
+const [loader, setloader] = React.useState(true);
+  React.useEffect(() => {
+    setloader(false);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
-	return (
+  return (
     <div>
+      <Loader loader={loader} />
+      <Cursor />
       <Navbars active="services" />
       <Particless />
       <div className="contact_section wow fadeInUp">

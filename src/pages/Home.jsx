@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbars from "../component/Navbars";
 import Particless from "../component/Particles";
 import { Link } from "react-router-dom";
 import WOW from "wow.js";
 import Slider from "react-slick";
-
+import { Triangle } from "react-loader-spinner";
 import EndFooter from "../component/EndFooter";
 import ServicesCard from "../component/ServicesCard";
+import Cursor from "../component/cursor";
+import Loader from "../component/Loader";
 export default function Home() {
-	const settings = {
+  const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 1,
@@ -19,14 +21,16 @@ export default function Home() {
     autoplaySpeed: 5000,
     arrows: false,
   };
-	useEffect(() => {
-		let wow = new WOW();
-		wow.init();
-		window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-	}, []);
+  const [loader, setloader] = React.useState(true);
+  useEffect(() => {
+    setloader(false);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
-	return (
+  return (
     <>
+      <Loader loader={loader} />
+      <Cursor />
       <Navbars active="home" />
       <Particless />
       <div className="main_benner ">
@@ -77,7 +81,7 @@ export default function Home() {
             For startups & midsized companies
           </h5>
           <div className="theme_btn">
-            <Link to="/contact">
+            <Link to="/Contact">
               <span>Get In Touch</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +228,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="theme_btn">
-                    <Link to="/contact">
+                    <Link to="/Contact">
                       <span>Get In Touch</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -289,8 +293,8 @@ export default function Home() {
                 <div className="work_description">
                   <h2>Find New Idea</h2>
                   <p>
-                    We are Creating new ideas & Translate your early vision
-                    & business requirements into a project blueprint.
+                    We are Creating new ideas & Translate your early vision &
+                    business requirements into a project blueprint.
                   </p>
                 </div>
               </div>

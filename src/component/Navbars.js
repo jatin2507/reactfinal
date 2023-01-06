@@ -33,7 +33,7 @@
 //                <li className="nav-item">
 //                 <NavLink
 //                   exact
-//                   to="/about"
+//                   to=""
 //                   activeClassName="active"
 //                   className="nav-links"
 //                   onClick={click ? handleClick : null}
@@ -44,7 +44,7 @@
 //               <li className="nav-item">
 //                 <NavLink
 //                   exact
-//                   to="/about"
+//                   to="/About"
 //                   activeClassName="active"
 //                   className="nav-links"
 //                   onClick={click ? handleClick : null}
@@ -101,7 +101,7 @@
 //               <li className="nav-item">
 //                 <NavLink
 //                   exact
-//                   to="/contact"
+//                   to="/Contact"
 //                   activeClassName="active"
 //                   className="nav-links"
 //                   onClick={click ? handleClick : null}
@@ -145,11 +145,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 import SlideToggle from "react-slide-toggle";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import useMediaQuery from "./useMediaQuery";
-import ReactWhatsapp from "react-whatsapp";
+
 export default function Navbars({ active }) {
-  const ref = useRef();
+
   const [click1, setclick1] = useState();
   const handleclick1 = () => setclick1(!click1);
   const [click2, setclick2] = useState(false);
@@ -180,14 +179,14 @@ export default function Navbars({ active }) {
                   active === "about" ? "menu_item active" : "menu_item"
                 }
               >
-                <Link to="/about">about</Link>
+                <Link to="/About">about</Link>
               </li>
               <li
                 className={
                   active === "our work" ? "menu_item active" : "menu_item"
                 }
               >
-                <Link to="/ourWork">our work</Link>
+                <Link to="/Our-Works">our work</Link>
                 {/* <ul className="submenu">
                   <li><Link to="service_detail.html">Design Project</Link></li>
                   <li><Link to="service_detail.html">Development Project</Link></li>
@@ -202,7 +201,7 @@ export default function Navbars({ active }) {
                     : "menu_item"
                 }
               >
-                <Link to="/services">
+                <Link to="/Services">
                   services{" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -219,22 +218,22 @@ export default function Navbars({ active }) {
                 </Link>
                 <ul className="submenu">
                   <li className={active === "services1" ? " active" : ""}>
-                    <Link to="/services1">Graphic Design</Link>
+                    <Link to="/Services/Graphic-Design">Graphic Design</Link>
                   </li>
                   <li className={active === "services2" ? " active" : ""}>
-                    <Link to="/services2">UI/UX Design</Link>
+                    <Link to="/Services/UI/UX-Design">UI/UX Design</Link>
                   </li>
                   <li className={active === "services3" ? " active" : ""}>
-                    <Link to="/services3">Frontend Development</Link>
+                    <Link to="/Services/FrontEnd-Dev">Frontend Development</Link>
                   </li>
                   <li className={active === "services4" ? " active" : ""}>
-                    <Link to="/services4">Backend Development</Link>
+                    <Link to="/Services/BackEnd-Dev">Backend Development</Link>
                   </li>
                   <li className={active === "services5" ? " active" : ""}>
-                    <Link to="/services5">Software Development</Link>
+                    <Link to="/Services/Software-Dev">Software Development</Link>
                   </li>
                   <li className={active === "services6" ? " active" : ""}>
-                    <Link to="/services6" on>
+                    <Link to="/Services/Game-Dev" on>
                       Game Development
                     </Link>
                   </li>
@@ -245,7 +244,7 @@ export default function Navbars({ active }) {
                   active === "contact" ? "menu_item active" : "menu_item"
                 }
               >
-                <Link to="/contact">contact</Link>
+                <Link to="/Contact">contact</Link>
               </li>
             </ul>
             <div className="nav_contact">
@@ -338,7 +337,7 @@ export default function Navbars({ active }) {
                               : "menu_item"
                           }
                         >
-                          <Link to="/about">about</Link>
+                          <Link to="/About">about</Link>
                         </li>
                         <li
                           className={
@@ -347,11 +346,11 @@ export default function Navbars({ active }) {
                               : "menu_item"
                           }
                         >
-                          <Link to="/ourWork">our work</Link>
+                          <Link to="/Our-Works">our work</Link>
                           {/* <ul className={!click1 ? "mobile_drop_down" : "hiddendropdown"} >
-                          <li><Link to="/services1" >ul/ux design</Link></li>
-                          <li><Link to="/services2" >Game Development</Link></li>
-                          <li><Link to="/services3" >Web Development</Link></li>
+                          <li><Link to="/Services/Graphic-Design" >ul/ux design</Link></li>
+                          <li><Link to="/Services/UI/UX-Design" >Game Development</Link></li>
+                          <li><Link to="/Services/FrontEnd-Dev" >Web Development</Link></li>
                         </ul> */}
                         </li>
                         <li
@@ -363,7 +362,7 @@ export default function Navbars({ active }) {
                               : ""
                           }
                         >
-                          <Link to="/services">
+                          <Link to="/Services">
                             services{" "}
                             </Link>
                             <i onClick={handleclick2}>
@@ -393,42 +392,42 @@ export default function Navbars({ active }) {
                                 active === "services1" ? " active" : ""
                               }
                             >
-                              <Link to="/services1">Graphics design</Link>
+                              <Link to="/Services/Graphic-Design">Graphics design</Link>
                             </li>
                             <li
                               className={
                                 active === "services2" ? " active" : ""
                               }
                             >
-                              <Link to="/services2">UI/UX Design</Link>
+                              <Link to="/Services/UI/UX-Design">UI/UX Design</Link>
                             </li>
                             <li
                               className={
                                 active === "services3" ? " active" : ""
                               }
                             >
-                              <Link to="/services3">Frontend Development</Link>
+                              <Link to="/Services/FrontEnd-Dev">Frontend Development</Link>
                             </li>
                             <li
                               className={
                                 active === "services4" ? " active" : ""
                               }
                             >
-                              <Link to="/services4">Backend Development</Link>
+                              <Link to="/Services/BackEnd-Dev">Backend Development</Link>
                             </li>
                             <li
                               className={
                                 active === "services5" ? "menuitem active" : ""
                               }
                             >
-                              <Link to="/services5">Software Development</Link>
+                              <Link to="/Services/Software-Dev">Software Development</Link>
                             </li>
                             <li
                               className={
                                 active === "services6" ? " active" : ""
                               }
                             >
-                              <Link to="/services6">Game Development</Link>
+                              <Link to="/Services/Game-Dev">Game Development</Link>
                             </li>
                           </ul>
                         </li>
@@ -439,7 +438,7 @@ export default function Navbars({ active }) {
                               : "menu_item"
                           }
                         >
-                          <Link to="/contact">contact</Link>
+                          <Link to="/Contact">contact</Link>
                         </li>
                       </ul>
                     </div>
@@ -483,10 +482,10 @@ export default function Navbars({ active }) {
 //             <div className="menu">
 //               <div className="menu-item">
 //                 <Link to="/">Home</Link>
-//                 <Link to="/about">About</Link>
-//                 <Link to="/ourWork">OurWork</Link>
-//                 <Link to="/services">Services</Link>
-//                 <Link to="/contact">Contact</Link>
+//                 <Link to="/About">About</Link>
+//                 <Link to="/Our-Works">OurWork</Link>
+//                 <Link to="/Services">Services</Link>
+//                 <Link to="/Contact">Contact</Link>
 //               </div>
 
 //             </div>

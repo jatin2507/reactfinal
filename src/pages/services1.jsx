@@ -5,13 +5,20 @@ import Navbars from "../component/Navbars";
 import EndFooter from "../component/EndFooter";
 import ServiceBox from "../component/ServiceBox";
 import { Link } from "react-router-dom";
+import Cursor from "../component/cursor";
+import Loader from "../component/Loader";
 
 const Services2 = () => {
+  const [loader, setloader] = React.useState(true);
   React.useEffect(() => {
+    setloader(false);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
   return (
     <div>
+      <Loader loader={loader} />
+
+      <Cursor />
       <Navbars active="services1" />
       <Particless />
       <div className="contact_section wow fadeInUp">
@@ -36,7 +43,7 @@ const Services2 = () => {
               />
             </svg>
             <Link
-              to="/services"
+              to="/Services"
               style={{ textDecoration: "none", color: "white" }}
             >
               Services Details
@@ -60,7 +67,7 @@ const Services2 = () => {
       <div className="info_section">
         <div className="about_blog container wow fadeInUp">
           <div className="row">
-            <div className="about_blog_left col-lg-8 col-md-7 col-sm-12">
+            <div className="about_blog_left col-lg-8 col-md-12 col-sm-12">
               <div className="about_blog_img">
                 <img
                   src={require("../images/services_page_1.png")}
@@ -137,7 +144,7 @@ const Services2 = () => {
                 </div>
               </div>
             </div>
-            <div className="about_blog_left col-lg-4 col-md-5 col-sm-12">
+            <div className="about_blog_left col-lg-4 col-md-d-none col-sm-12">
               <ServiceBox />
             </div>
           </div>
@@ -174,7 +181,10 @@ const Services2 = () => {
                   </div>
                   <div className=" assurance_service_detail">
                     <h2>Management</h2>
-                    <h6>Be calm and manage your business with our management services.</h6>
+                    <h6>
+                      Be calm and manage your business with our management
+                      services.
+                    </h6>
                   </div>
                 </div>
               </div>

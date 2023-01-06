@@ -13,7 +13,7 @@ export default function EndFooter() {
 out. We'll contact you within 24 hours of receiving your request.
               </h6>
               <div className="theme_btn_2">
-                <Link to="/contact">
+                <Link to="/Contact">
                   <span>Get In Touch</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -350,7 +350,7 @@ out. We'll contact you within 24 hours of receiving your request.
               <div className="footer-title">Company</div>
               <div className="footer_category">
                 <li>
-                  <Link to="/about">
+                  <Link to="/About">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -368,7 +368,7 @@ out. We'll contact you within 24 hours of receiving your request.
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services">
+                  <Link to="/Services">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -404,7 +404,7 @@ out. We'll contact you within 24 hours of receiving your request.
                     </Link>
                   </li> */}
                 <li>
-                  <Link to="/ourWork">
+                  <Link to="/Our-Works">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -427,7 +427,7 @@ out. We'll contact you within 24 hours of receiving your request.
               <div className="footer-title">Services</div>
               <div className="footer_category">
                 <li>
-                  <Link to="/services1">
+                  <Link to="/Services/Graphic-Design">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -445,7 +445,7 @@ out. We'll contact you within 24 hours of receiving your request.
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services2">
+                  <Link to="/Services/UI/UX-Design">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -463,7 +463,7 @@ out. We'll contact you within 24 hours of receiving your request.
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services3">
+                  <Link to="/Services/FrontEnd-Dev">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -481,7 +481,7 @@ out. We'll contact you within 24 hours of receiving your request.
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services4">
+                  <Link to="/Services/BackEnd-Dev">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -499,7 +499,7 @@ out. We'll contact you within 24 hours of receiving your request.
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services5">
+                  <Link to="/Services/Software-Dev">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}
@@ -517,7 +517,7 @@ out. We'll contact you within 24 hours of receiving your request.
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services6">
+                  <Link to="/Services/Game-Dev">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={11}

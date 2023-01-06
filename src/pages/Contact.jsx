@@ -3,10 +3,14 @@ import { ToastContainer, toast } from "react-toastify";
 import Navbars from "../component/Navbars";
 import Particless from "../component/Particles";
 import { Link, useNavigate } from "react-router-dom";
-
+import cursor from "../component/cursor";
+import Cursor from "../component/cursor";
+import Loader from "../component/Loader";
 export default function Contact({ axios }) {
   const [data, setdata] = React.useState({});
+  const [loader, setloader] = React.useState(true);
   React.useEffect(() => {
+    setloader(false);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
   let cData = [
@@ -980,6 +984,8 @@ export default function Contact({ axios }) {
   const nevi = useNavigate();
   return (
     <div>
+      <Loader loader={loader} />
+      <Cursor />
       <Navbars active="contact" />
 
       <Particless />
@@ -1010,12 +1016,12 @@ export default function Contact({ axios }) {
       </div>
       <div className="info_section">
         <div className="contact_form_wrapper container wow fadeInUp">
-          <div className="contact_form">
+          <div className="contact_form" style={{ cursor: "none" }}>
             <div className="contact_form_title">
               <h2>Get a quote</h2>
             </div>
             <div className="contct_form_wrap col-md-8 m-auto">
-              <form type="submit">
+              <form type="submit" style={{ cursor: "none" }}>
                 <label className="contact_title" htmlFor="fname">
                   Your Name
                 </label>
@@ -1040,7 +1046,7 @@ export default function Contact({ axios }) {
                     setdata({ ...data, email: e.target.value });
                   }}
                 />
-                <label for="services" className="contact_title">
+                <label htmlFor="services" className="contact_title">
                   Choose a Services:
                 </label>
                 <select
@@ -1510,7 +1516,7 @@ export default function Contact({ axios }) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services">
+                      <Link to="/Services">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={11}
@@ -1546,7 +1552,7 @@ export default function Contact({ axios }) {
                     </Link>
                   </li> */}
                     <li>
-                      <Link to="/ourWork">
+                      <Link to="/Our-Works">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={11}

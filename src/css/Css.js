@@ -1,4 +1,4 @@
-import './animate.css'
+// import './animate.css'
 import './style.css'
 import './media.css'
 import './Orbit.css'

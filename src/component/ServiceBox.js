@@ -17,7 +17,7 @@ export default function ServiceBox() {
         <div className="about_service_title">
           <h2>Services</h2>
           <div className="service_sub_desc">
-            <Link to="/services1">
+            <Link to="/Services/Graphic-Design">
               <span>01. Graphic Design</span>
             </Link>
             <svg
@@ -34,7 +34,7 @@ export default function ServiceBox() {
             </svg>
           </div>
           <div className="service_sub_desc">
-            <Link to="/services2">
+            <Link to="/Services/UI/UX-Design">
               <span>02. UI/UX Design</span>
             </Link>
             <svg
@@ -51,7 +51,7 @@ export default function ServiceBox() {
             </svg>
           </div>
           <div className="service_sub_desc">
-            <Link to="/services3">
+            <Link to="/Services/FrontEnd-Dev">
               <span>03. Frontend Development</span>
             </Link>
             <svg
@@ -68,7 +68,7 @@ export default function ServiceBox() {
             </svg>
           </div>
           <div className="service_sub_desc">
-            <Link to="/services4">
+            <Link to="/Services/BackEnd-Dev">
               <span>04. Backend Development</span>
             </Link>
             <svg
@@ -85,7 +85,7 @@ export default function ServiceBox() {
             </svg>
           </div>
           <div className="service_sub_desc">
-            <Link to="/services5">
+            <Link to="/Services/Software-Dev">
               <span>05. Software Development</span>
             </Link>
             <svg
@@ -102,7 +102,7 @@ export default function ServiceBox() {
             </svg>
           </div>
           <div className="service_sub_desc">
-            <Link to="/services6">
+            <Link to="/Services/Game-Dev">
               <span>06. Game Development</span>
             </Link>
             <svg
@@ -196,7 +196,7 @@ export default function ServiceBox() {
         <div className="profile_title">
           <h2>company profile</h2>
         </div>
-        <button type="submit" className="profile_det_submit">
+        <button type="submit" className="profile_det_submit ">
           <Link href="#">
             <span>
               Download PDF{" "}
@@ -217,7 +217,7 @@ export default function ServiceBox() {
         </button>
         <button
           type="submit"
-          className=" profile_det_submit profile_det_submit_word"
+          className=" profile_det_submit profile_det_submit_word "
         >
           <Link href="#">
             <span>

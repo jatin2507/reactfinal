@@ -1,16 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbars from "../component/Navbars";
 import WOW from "wow.js";
 import Particless from "../component/Particles";
 import { Link } from "react-router-dom";
 
 import EndFooter from "../component/EndFooter";
+import Cursor from "../component/cursor";
+import Loader from "../component/Loader";
 export default function About() {
-  useEffect(() => {
+  const [loader, setloader] = useState(true);
+  useEffect(() => {setloader(false);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
   return (
     <>
+      <Loader loader={loader} />
+      <Cursor />
       <Navbars active="about" />
       <Particless />
       <div className="contact_section wow fadeInUp">
