@@ -9,7 +9,7 @@ export default function EndFooter() {
             <div className="offer_desc">
               <h2>Have a project For us?</h2>
               <h6>
-                CLet us know what you need and we will send you a brief form for you to fill
+                Let us know what you need and we will send you a brief form for you to fill
 out. We'll contact you within 24 hours of receiving your request.
               </h6>
               <div className="theme_btn_2">
@@ -51,7 +51,7 @@ out. We'll contact you within 24 hours of receiving your request.
                       <Link
                         onClick={() => {
                           const newWindow = window.open(
-                            "https://api.whatsapp.com/send?phone=9409911772&text=Hello, Dark ninja solutions",
+                            "https://api.whatsapp.com/send?phone=+919409911772&text=Hello, Dark ninja solutions",
                             "_blank"
                           );
                         }}

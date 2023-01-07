@@ -328,7 +328,7 @@ export default function About() {
         {/* <div className="testimonial ">
           <div className="container">
             <div className="sub_title wow fadeInUp">
-              <h4>Latest Project</h4>
+              <h4>LATEST PROJECTS</h4>
             </div>
             <div className="main_title wow fadeInUp">
               <h2>
