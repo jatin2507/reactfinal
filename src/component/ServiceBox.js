@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import axioscon from "axios";
 
 import { ToastContainer, toast } from "react-toastify";
-var axios = axioscon.create({ baseURL: "http://localhost:2507" });
-// var axios = axioscon.create({ baseURL: "http://147.182.178.0:2507" });
+//var axios = axioscon.create({ baseURL: "http://localhost:2507" });
+var axios = axioscon.create({ baseURL: "http://147.182.178.0:2507" });
 export default function ServiceBox() {
   const [output, setoutput] = useState({
     phonenum: "0101010101",
