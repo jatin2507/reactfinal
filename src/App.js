@@ -22,7 +22,7 @@ import AdminPage from "./pages/AdminPage";
 import axioscon from "axios";
 import { v4 as uuidv4 } from "uuid";
 
-var axios = axioscon.create({ baseURL: "http://localhost:2507" });
+var axios = axioscon.create({ baseURL: "http://147.182.178.0:2507" });
 function App() {
   let route = uuidv4();
   useEffect(() => {
