@@ -19,104 +19,105 @@ export default function ServiceBox() {
           <div className="service_sub_desc">
             <Link to="/Services/Graphic-Design">
               <span>01. Graphic Design</span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={12}
+                height={13}
+                viewBox="0 0 12 13"
+                fill="none"
+              >
+                <path
+                  d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
+                  fill="white"
+                />
+              </svg>
             </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={12}
-              height={13}
-              viewBox="0 0 12 13"
-              fill="none"
-            >
-              <path
-                d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
-                fill="white"
-              />
-            </svg>
           </div>
           <div className="service_sub_desc">
             <Link to="/Services/UI/UX-Design">
               <span>02. UI/UX Design</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={12}
+                height={13}
+                viewBox="0 0 12 13"
+                fill="none"
+              >
+                <path
+                  d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
+                  fill="white"
+                />
+              </svg>{" "}
             </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={12}
-              height={13}
-              viewBox="0 0 12 13"
-              fill="none"
-            >
-              <path
-                d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
-                fill="white"
-              />
-            </svg>
           </div>
           <div className="service_sub_desc">
             <Link to="/Services/FrontEnd-Dev">
               <span>03. Frontend Development</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={12}
+                height={13}
+                viewBox="0 0 12 13"
+                fill="none"
+              >
+                <path
+                  d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
+                  fill="white"
+                />
+              </svg>{" "}
             </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={12}
-              height={13}
-              viewBox="0 0 12 13"
-              fill="none"
-            >
-              <path
-                d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
-                fill="white"
-              />
-            </svg>
           </div>
           <div className="service_sub_desc">
             <Link to="/Services/BackEnd-Dev">
               <span>04. Backend Development</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={12}
+                height={13}
+                viewBox="0 0 12 13"
+                fill="none"
+              >
+                <path
+                  d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
+                  fill="white"
+                />
+              </svg>{" "}
             </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={12}
-              height={13}
-              viewBox="0 0 12 13"
-              fill="none"
-            >
-              <path
-                d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
-                fill="white"
-              />
-            </svg>
           </div>
           <div className="service_sub_desc">
             <Link to="/Services/Software-Dev">
               <span>05. Software Development</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={12}
+                height={13}
+                viewBox="0 0 12 13"
+                fill="none"
+              >
+                <path
+                  d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
+                  fill="white"
+                />
+              </svg>{" "}
             </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={12}
-              height={13}
-              viewBox="0 0 12 13"
-              fill="none"
-            >
-              <path
-                d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
-                fill="white"
-              />
-            </svg>
           </div>
           <div className="service_sub_desc">
             <Link to="/Services/Game-Dev">
               <span>06. Game Development</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={12}
+                height={13}
+                viewBox="0 0 12 13"
+                fill="none"
+              >
+                <path
+                  d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
+                  fill="white"
+                />
+              </svg>{" "}
             </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={12}
-              height={13}
-              viewBox="0 0 12 13"
-              fill="none"
-            >
-              <path
-                d="M9.129 5.75L5.106 1.727L6.1665 0.666504L12 6.5L6.1665 12.3335L5.106 11.273L9.129 7.25H0V5.75H9.129Z"
-                fill="white"
-              />
-            </svg>
           </div>
         </div>
       </div>
@@ -238,7 +239,7 @@ export default function ServiceBox() {
           </Link>
         </button>
       </div>
-	  <ToastContainer
+      <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
