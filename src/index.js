@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import './css/Css'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "babel-polyfill"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
