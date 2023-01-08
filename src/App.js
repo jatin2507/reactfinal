@@ -71,6 +71,7 @@ function App() {
         />
       </Helmet>
       <BrowserRouter>
+      
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/About" exact element={<About />} />
