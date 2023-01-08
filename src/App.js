@@ -22,7 +22,7 @@ import AdminPage from "./pages/AdminPage";
 import axioscon from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Helmet from "react-helmet";
-var axios = axioscon.create({ baseURL: "https://147.182.178.0:2507" });
+var axios = axioscon.create({ baseURL: "https://darkninjasolutions.com:2507" });
 function App() {
   let route = uuidv4();
   useEffect(() => {}, []);

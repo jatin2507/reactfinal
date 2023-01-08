@@ -4,7 +4,7 @@ import axioscon from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 //var axios = axioscon.create({ baseURL: "http://localhost:2507" });
-var axios = axioscon.create({ baseURL: "https://147.182.178.0:2507" });
+var axios = axioscon.create({ baseURL: "https://darkninjasolutions.com:2507" });
 export default function ServiceBox() {
   const [output, setoutput] = useState({
     phonenum: "0101010101",
