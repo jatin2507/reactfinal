@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axioscon from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
-import { ToastContainer, toast } from "react-toastify";
 //var axios = axioscon.create({ baseURL: "http://localhost:2507" });
 var axios = axioscon.create({ baseURL: "http://147.182.178.0:2507" });
 export default function ServiceBox() {
@@ -170,9 +170,9 @@ export default function ServiceBox() {
               console.log(output);
               axios.post("/entry", output).then((e) => {
                 if (e.data.code === 200) {
-                  toast("Thanks For Feedback");
+                  toast.success("Thanks For Feedback");
                 } else {
-                  toast.info(e.data.data);
+                  toast(e.data.data);
                 }
               });
             }}
@@ -239,18 +239,6 @@ export default function ServiceBox() {
           </Link>
         </button>
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
     </div>
   );
 }

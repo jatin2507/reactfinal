@@ -24,6 +24,8 @@ export default function Home() {
   const [loader, setloader] = React.useState(true);
   useEffect(() => {
     setloader(false);
+    let wow = new WOW();
+    wow.init();
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 

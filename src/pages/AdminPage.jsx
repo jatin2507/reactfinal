@@ -8,7 +8,7 @@ import {
   WhatsAppOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-import { ToastContainer, toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
 import Cursor from "../component/cursor";
 import Loader from "../component/Loader";
 const { Column, ColumnGroup } = Table;
@@ -21,7 +21,7 @@ export default function AdminPage({ axios }) {
       .then((e) => {
         console.log(e.data);
         if (e.data.code === 200) {
-          toast("Data Fetch ...");
+          toast.success("Data Fetch ...");
           setdata(e.data.data);
         }
       })
@@ -113,18 +113,6 @@ export default function AdminPage({ axios }) {
         }}
       />
 
-      <ToastContainer
-        position="bottom-left"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
     </div>
   );
 }

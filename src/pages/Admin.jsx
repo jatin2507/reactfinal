@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
 import Cursor from "../component/cursor";
 import Loader from "../component/Loader";
-
+import WOW from "wow.js";
 export default function Admin(props) {
   const [data, setdata] = useState({});
   const nevi = useNavigate();
@@ -12,7 +12,8 @@ export default function Admin(props) {
  const [loader, setloader] = useState(true);
  
  useEffect(() => {
-   setloader(false);
+   setloader(false); let wow = new WOW();
+   wow.init();
    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
  }, []);
  return (
@@ -61,7 +62,7 @@ export default function Admin(props) {
                props.axios
                  .post("/admin/radheykrishna/login", data)
                  .then((e) => {
-                   toast.info(e.data.data);
+                   toast(e.data.data);
                    if (e.data.code === 200 && !e.data.error) {
                      nevi("/admin/radheykrishna/" + props.route);
                      toast.success(e.data.data);
@@ -89,18 +90,7 @@ export default function Admin(props) {
          </form>
        </div>
      </div>
-     <ToastContainer
-       position="top-right"
-       autoClose={5000}
-       hideProgressBar={false}
-       newestOnTop={false}
-       closeOnClick
-       rtl={false}
-       pauseOnFocusLoss
-       draggable
-       pauseOnHover
-       theme="dark"
-     />
+  
    </>
  );
 }

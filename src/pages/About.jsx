@@ -10,7 +10,8 @@ import Loader from "../component/Loader";
 export default function About() {
   const [loader, setloader] = useState(true);
   useEffect(() => {setloader(false);
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); let wow = new WOW();
+    wow.init();
   }, []);
   return (
     <>

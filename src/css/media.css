@@ -97,7 +97,7 @@
     }
 
     select#phoneno {
-        width: 15%;
+        width: 40%;
     }
 
     .theme_btn {
@@ -265,7 +265,7 @@
     }
 
     select#phoneno {
-        width: 50%;
+        width: 35%;
     }
 
     .about_btn {
@@ -425,7 +425,7 @@
 
 @media (max-width: 650px) {
     select#phoneno {
-        width: 16%;
+        width: 40%;
     }
 }
 
@@ -515,7 +515,7 @@
     }
 
     select#phoneno {
-        width: 55%;
+        width: 40%;
     }
 
     .about_block,
@@ -623,7 +623,7 @@
 
 @media (max-width: 376px) {
     select#phoneno {
-        width: 46%;
+        width: 65%;
     }
         .contact_form_title h2 {
             font-size: 20px;

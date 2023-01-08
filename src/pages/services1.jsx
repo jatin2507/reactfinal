@@ -1,7 +1,7 @@
 import React from "react";
 import Particless from "../component/Particles";
 import Navbars from "../component/Navbars";
-
+import WOW from "wow.js";
 import EndFooter from "../component/EndFooter";
 import ServiceBox from "../component/ServiceBox";
 import { Link } from "react-router-dom";
@@ -11,7 +11,8 @@ import Loader from "../component/Loader";
 const Services2 = () => {
   const [loader, setloader] = React.useState(true);
   React.useEffect(() => {
-    setloader(false);
+    setloader(false); let wow = new WOW();
+    wow.init();
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
   return (
