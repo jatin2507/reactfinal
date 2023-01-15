@@ -8,6 +8,7 @@ import cursor from "../component/cursor";
 import Cursor from "../component/cursor";
 import Loader from "../component/Loader";
 import useMediaQuery from "../component/useMediaQuery";
+import Logo from "../component/Logo";
 export default function Contact({ axios }) {
   const [data, setdata] = React.useState({});
   const [loader, setloader] = React.useState(true);
@@ -1553,10 +1554,9 @@ export default function Contact({ axios }) {
               <div className="row">
                 <div className="footer_address col-md-4 col-sm-6 col-xs-12">
                   <div className="footer_logo">
-                    <img
-                      src={require("../images/logo.png")}
-                      alt="footer logo"
-                    />
+                    <Link to="/">
+                      <Logo />
+                    </Link>
                   </div>
                   <div className="footer_email">
                     <svg
@@ -2017,7 +2017,6 @@ export default function Contact({ axios }) {
         </>
         {/* ---footer copy-right start--- */}
       </div>
-     
     </div>
   );
 }

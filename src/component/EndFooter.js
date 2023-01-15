@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 export default function EndFooter() {
   return (
     <>
@@ -9,8 +10,9 @@ export default function EndFooter() {
             <div className="offer_desc">
               <h2>Have a project For us?</h2>
               <h6>
-                Let us know what you need and we will send you a brief form for you to fill
-out. We'll contact you within 24 hours of receiving your request.
+                Let us know what you need and we will send you a brief form for
+                you to fill out. We'll contact you within 24 hours of receiving
+                your request.
               </h6>
               <div className="theme_btn_2">
                 <Link to="/Contact">
@@ -150,7 +152,10 @@ out. We'll contact you within 24 hours of receiving your request.
           <div className="row">
             <div className="footer_address col-md-4 col-sm-6 col-xs-12">
               <div className="footer_logo">
-                <img src={require("../images/logo.png")} alt="footer logo" />
+                <Link to="/">
+                  <Logo />
+                </Link>
+                {/* <img src={require("../images/logo.svg")} alt="footer logo" /> */}
               </div>
               <div className="footer_email">
                 <svg

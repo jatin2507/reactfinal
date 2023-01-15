@@ -146,6 +146,7 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 import SlideToggle from "react-slide-toggle";
 import useMediaQuery from "./useMediaQuery";
+import Logo from "./Logo";
 
 export default function Navbars({ active }) {
 
@@ -165,7 +166,7 @@ export default function Navbars({ active }) {
           <div className="menu_navbar">
             <div className="navbar_logo">
               <Link to="/">
-                <img src={require("../images/logo.png")} alt="Logo Here" />
+                <Logo/>
               </Link>
             </div>
             <ul className="mainmenu">
