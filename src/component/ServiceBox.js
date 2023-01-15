@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 //var axios = axioscon.create({ baseURL: "http://localhost:2507" });
 var axios = axioscon.create({ baseURL: "https://darkninjasolutions.com:2507" });
-export default function ServiceBox() {
+export default function ServiceBox(prop) {
   const [output, setoutput] = useState({
     phonenum: "0101010101",
     phonecode: "FEEDBACK",
@@ -16,7 +16,13 @@ export default function ServiceBox() {
       <div className="about_service_box_detail">
         <div className="about_service_title">
           <h2>Services</h2>
-          <div className="service_sub_desc">
+          <div
+            className={
+              prop.show === "1"
+                ? "service_sub_desc service_sub_desc_Active"
+                : "service_sub_desc"
+            }
+          >
             <Link to="/Services/Graphic-Design">
               <span>01. Graphic Design</span>
 
@@ -34,7 +40,13 @@ export default function ServiceBox() {
               </svg>
             </Link>
           </div>
-          <div className="service_sub_desc">
+          <div
+            className={
+              prop.show === "2"
+                ? "service_sub_desc service_sub_desc_Active"
+                : "service_sub_desc"
+            }
+          >
             <Link to="/Services/UI/UX-Design">
               <span>02. UI/UX Design</span>
               <svg
@@ -51,7 +63,13 @@ export default function ServiceBox() {
               </svg>{" "}
             </Link>
           </div>
-          <div className="service_sub_desc">
+          <div
+            className={
+              prop.show === "3"
+                ? "service_sub_desc service_sub_desc_Active"
+                : "service_sub_desc"
+            }
+          >
             <Link to="/Services/FrontEnd-Dev">
               <span>03. Frontend Development</span>
               <svg
@@ -68,7 +86,13 @@ export default function ServiceBox() {
               </svg>{" "}
             </Link>
           </div>
-          <div className="service_sub_desc">
+          <div
+            className={
+              prop.show === "4"
+                ? "service_sub_desc service_sub_desc_Active"
+                : "service_sub_desc"
+            }
+          >
             <Link to="/Services/BackEnd-Dev">
               <span>04. Backend Development</span>
               <svg
@@ -85,7 +109,13 @@ export default function ServiceBox() {
               </svg>{" "}
             </Link>
           </div>
-          <div className="service_sub_desc">
+          <div
+            className={
+              prop.show === "5"
+                ? "service_sub_desc service_sub_desc_Active"
+                : "service_sub_desc"
+            }
+          >
             <Link to="/Services/Software-Dev">
               <span>05. Software Development</span>
               <svg
@@ -102,7 +132,13 @@ export default function ServiceBox() {
               </svg>{" "}
             </Link>
           </div>
-          <div className="service_sub_desc">
+          <div
+            className={
+              prop.show === "6"
+                ? "service_sub_desc service_sub_desc_Active"
+                : "service_sub_desc"
+            }
+          >
             <Link to="/Services/Game-Dev">
               <span>06. Game Development</span>
               <svg

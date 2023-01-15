@@ -143,7 +143,7 @@ const [loader, setloader] = React.useState(true);
               </div>
             </div>
             <div className="about_blog_left col-lg-4 col-md-d-none col-sm-12">
-              <ServiceBox />
+              <ServiceBox show={"2"}/>
             </div>
           </div>
         </div>

@@ -233,7 +233,7 @@ export default function Navbars({ active }) {
                     <Link to="/Services/Software-Dev">Software Development</Link>
                   </li>
                   <li className={active === "services6" ? " active" : ""}>
-                    <Link to="/Services/Game-Dev" on>
+                    <Link to="/Services/Game-Dev" >
                       Game Development
                     </Link>
                   </li>

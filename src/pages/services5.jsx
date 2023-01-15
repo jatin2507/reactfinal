@@ -128,7 +128,7 @@ const Services5 = () => {
               </div>
             </div>
             <div className="about_blog_left col-lg-4 col-md-d-none col-sm-12">
-              <ServiceBox />
+              <ServiceBox show={"5"}/>
             </div>
           </div>
         </div>

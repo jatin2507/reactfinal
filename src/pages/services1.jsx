@@ -11,7 +11,8 @@ import Loader from "../component/Loader";
 const Services2 = () => {
   const [loader, setloader] = React.useState(true);
   React.useEffect(() => {
-    setloader(false); let wow = new WOW();
+    setloader(false);
+    let wow = new WOW();
     wow.init();
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -146,7 +147,7 @@ const Services2 = () => {
               </div>
             </div>
             <div className="about_blog_left col-lg-4 col-md-d-none col-sm-12">
-              <ServiceBox />
+              <ServiceBox show={"1"} />
             </div>
           </div>
         </div>
