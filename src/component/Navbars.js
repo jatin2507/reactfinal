@@ -142,20 +142,19 @@
 // export default NavBar;
 
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
 import SlideToggle from "react-slide-toggle";
 import useMediaQuery from "./useMediaQuery";
 import Logo from "./Logo";
 
 export default function Navbars({ active }) {
-
   const [click1, setclick1] = useState();
   const handleclick1 = () => setclick1(!click1);
   const [click2, setclick2] = useState(false);
   const handleclick2 = () => setclick2(!click2);
   const [size, setsize] = useState(false);
-
+  const nevi = useNavigate();
   let fream = useMediaQuery("(max-width: 1024px)");
 
   return (
@@ -166,16 +165,22 @@ export default function Navbars({ active }) {
           <div className="menu_navbar">
             <div className="navbar_logo">
               <Link to="/">
-                <Logo/>
+                <Logo />
               </Link>
             </div>
             <ul className="mainmenu">
               <li
+                onClick={() => {
+                  nevi("/");
+                }}
                 className={active === "home" ? "menu_item active" : "menu_item"}
               >
-                <Link to="/">home</Link>
+                <Link>home</Link>
               </li>
               <li
+                onClick={() => {
+                  nevi("/About");
+                }}
                 className={
                   active === "about" ? "menu_item active" : "menu_item"
                 }
@@ -183,6 +188,9 @@ export default function Navbars({ active }) {
                 <Link to="/About">about</Link>
               </li>
               <li
+                onClick={() => {
+                  nevi("/Our-Works");
+                }}
                 className={
                   active === "our work" ? "menu_item active" : "menu_item"
                 }
@@ -195,6 +203,9 @@ export default function Navbars({ active }) {
                 </ul> */}
               </li>
               <li
+                onClick={() => {
+                  nevi("/Services");
+                }}
                 className={
                   active === "services" ||
                   active.substring(0, active.length - 1) === "services"
@@ -218,29 +229,64 @@ export default function Navbars({ active }) {
                   </svg>
                 </Link>
                 <ul className="submenu">
-                  <li className={active === "services1" ? " active" : ""}>
+                  <li
+                    onClick={() => {
+                      nevi("/Services/Graphic-Design");
+                    }}
+                    className={active === "services1" ? " active" : ""}
+                  >
                     <Link to="/Services/Graphic-Design">Graphic Design</Link>
                   </li>
-                  <li className={active === "services2" ? " active" : ""}>
+                  <li
+                    onClick={() => {
+                      nevi("/Services/UI/UX-Design");
+                    }}
+                    className={active === "services2" ? " active" : ""}
+                  >
                     <Link to="/Services/UI/UX-Design">UI/UX Design</Link>
                   </li>
-                  <li className={active === "services3" ? " active" : ""}>
-                    <Link to="/Services/FrontEnd-Dev">Frontend Development</Link>
+                  <li
+                    onClick={() => {
+                      nevi("/Services/FrontEnd-Dev");
+                    }}
+                    className={active === "services3" ? " active" : ""}
+                  >
+                    <Link to="/Services/FrontEnd-Dev">
+                      Frontend Development
+                    </Link>
                   </li>
-                  <li className={active === "services4" ? " active" : ""}>
+                  <li
+                    onClick={() => {
+                      nevi("/Services/BackEnd-Dev");
+                    }}
+                    className={active === "services4" ? " active" : ""}
+                  >
                     <Link to="/Services/BackEnd-Dev">Backend Development</Link>
                   </li>
-                  <li className={active === "services5" ? " active" : ""}>
-                    <Link to="/Services/Software-Dev">Software Development</Link>
-                  </li>
-                  <li className={active === "services6" ? " active" : ""}>
-                    <Link to="/Services/Game-Dev" >
-                      Game Development
+                  <li
+                    onClick={() => {
+                      nevi("/Services/Software-Dev");
+                    }}
+                    className={active === "services5" ? " active" : ""}
+                  >
+                    <Link to="/Services/Software-Dev">
+                      Software Development
                     </Link>
+                  </li>
+                  <li
+                    onClick={() => {
+                      nevi("/Services/Game-Dev");
+                    }}
+                    className={active === "services6" ? " active" : ""}
+                  >
+                    <Link to="/Services/Game-Dev">Game Development</Link>
                   </li>
                 </ul>
               </li>
               <li
+                onClick={() => {
+                  nevi("/Contact");
+                }}
                 className={
                   active === "contact" ? "menu_item active" : "menu_item"
                 }
@@ -325,6 +371,9 @@ export default function Navbars({ active }) {
                         className={size ? "mob_main_menu" : "mobile_drop_down"}
                       >
                         <li
+                          onClick={() => {
+                            nevi("/");
+                          }}
                           className={
                             active === "home" ? "menu_item active" : "menu_item"
                           }
@@ -332,6 +381,9 @@ export default function Navbars({ active }) {
                           <Link to="/">home</Link>
                         </li>
                         <li
+                          onClick={() => {
+                            nevi("/About");
+                          }}
                           className={
                             active === "about"
                               ? "menu_item active"
@@ -341,6 +393,9 @@ export default function Navbars({ active }) {
                           <Link to="/About">about</Link>
                         </li>
                         <li
+                          onClick={() => {
+                            nevi("/Our-Works");
+                          }}
                           className={
                             active === "our work"
                               ? "menu_item active"
@@ -355,6 +410,9 @@ export default function Navbars({ active }) {
                         </ul> */}
                         </li>
                         <li
+                          onClick={() => {
+                            nevi("/Services");
+                          }}
                           className={
                             active === "services" ||
                             active.substring(0, active.length - 1) ===
@@ -363,76 +421,101 @@ export default function Navbars({ active }) {
                               : ""
                           }
                         >
-                          <Link to="/Services">
-                            services{" "}
-                            </Link>
-                            <i onClick={handleclick2}>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                              >
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path
-                                  d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"
-                                  fill="rgba(255,255,255,1)"
-                                />
-                              </svg>
-                            </i>
-                          
-                          <ul
-                            className={
-                              click2
-                                ? ""
-                                : "mobile_drop_down"
-                            }
-                          >
+                          <Link to="/Services">services </Link>
+                          <i onClick={handleclick2}>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              height="24"
+                            >
+                              <path fill="none" d="M0 0h24v24H0z" />
+                              <path
+                                d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"
+                                fill="rgba(255,255,255,1)"
+                              />
+                            </svg>
+                          </i>
+
+                          <ul className={click2 ? "" : "mobile_drop_down"}>
                             <li
+                              onClick={() => {
+                                nevi("/Services/Graphic-Design");
+                              }}
                               className={
                                 active === "services1" ? " active" : ""
                               }
                             >
-                              <Link to="/Services/Graphic-Design">Graphics design</Link>
+                              <Link to="/Services/Graphic-Design">
+                                Graphics design
+                              </Link>
                             </li>
                             <li
+                              onClick={() => {
+                                nevi("/Services/UI/UX-Design");
+                              }}
                               className={
                                 active === "services2" ? " active" : ""
                               }
                             >
-                              <Link to="/Services/UI/UX-Design">UI/UX Design</Link>
+                              <Link to="/Services/UI/UX-Design">
+                                UI/UX Design
+                              </Link>
                             </li>
                             <li
+                              onClick={() => {
+                                nevi("/Services/FrontEnd-Dev");
+                              }}
                               className={
                                 active === "services3" ? " active" : ""
                               }
                             >
-                              <Link to="/Services/FrontEnd-Dev">Frontend Development</Link>
+                              <Link to="/Services/FrontEnd-Dev">
+                                Frontend Development
+                              </Link>
                             </li>
                             <li
+                              onClick={() => {
+                                nevi("/Services/BackEnd-Dev");
+                              }}
                               className={
                                 active === "services4" ? " active" : ""
                               }
                             >
-                              <Link to="/Services/BackEnd-Dev">Backend Development</Link>
+                              <Link to="/Services/BackEnd-Dev">
+                                Backend Development
+                              </Link>
                             </li>
                             <li
+                              onClick={() => {
+                                nevi("/Services/Software-Dev");
+                              }}
                               className={
                                 active === "services5" ? "menuitem active" : ""
                               }
                             >
-                              <Link to="/Services/Software-Dev">Software Development</Link>
+                              <Link to="/Services/Software-Dev">
+                                Software Development
+                              </Link>
                             </li>
                             <li
+                              onClick={() => {
+                                nevi("/Services/Game-Dev");
+                              }}
                               className={
                                 active === "services6" ? " active" : ""
                               }
                             >
-                              <Link to="/Services/Game-Dev">Game Development</Link>
+                              <Link to="/Services/Game-Dev">
+                                Game Development
+                              </Link>
                             </li>
                           </ul>
                         </li>
                         <li
+                          onClick={() => {
+                            nevi("/Contact");
+                          }}
                           className={
                             active === "contact"
                               ? "menu_item active"
