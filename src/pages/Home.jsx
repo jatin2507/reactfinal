@@ -147,14 +147,14 @@ export default function Home() {
         <div className="about_block">
           <div className="container">
             <div className="about_block_wrapper row">
-              <div className="about_block_image col-lg-6 col-md-12 wow fadeInLeft">
+              <div className="about_block_image col-lg-6 col-md-12 wow fadeInUp">
                 <img
                   src={require("../images/about_iamge_1.png")}
                   className="img-fluid"
                   alt="advance images"
                 />
               </div>
-              <div className="about_block_content sub_title col-lg-6 col-md-12  wow fadeInRight">
+              <div className="about_block_content sub_title col-lg-6 col-md-12  wow fadeInUp">
                 <h4>WHO WE ARE</h4>
                 <div className="main_title">
                   <h2>We are professional team, passionate about your work</h2>
