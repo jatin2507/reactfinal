@@ -203,9 +203,6 @@ export default function Navbars({ active }) {
                 </ul> */}
               </li>
               <li
-                onClick={() => {
-                  nevi("/Services");
-                }}
                 className={
                   active === "services" ||
                   active.substring(0, active.length - 1) === "services"
@@ -410,9 +407,6 @@ export default function Navbars({ active }) {
                         </ul> */}
                         </li>
                         <li
-                          onClick={() => {
-                            nevi("/Services");
-                          }}
                           className={
                             active === "services" ||
                             active.substring(0, active.length - 1) ===
