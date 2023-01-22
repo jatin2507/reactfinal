@@ -69,9 +69,12 @@ function App() {
           name="twitter:image"
           content="https://upwork-usw2-prod-assets-static.s3.us-west-2.amazonaws.com/org-logo/1589993875441840128"
         />
+        <meta
+          name="keywords"
+          content="dark ninja solutions it solutions IT solutions Dark ninja dark Ninja Black ninja white ninja ninjasolutions ninja solutions dark solutions backend development frontend web development react node "
+        ></meta>
       </Helmet>
       <BrowserRouter>
-
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/About" exact element={<About />} />
